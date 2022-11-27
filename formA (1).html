@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid red;
+  border-radius: 4px;
+}
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+<h2>You can answer all and you can skip any</h2>
+
+<form action="{{ url_for('Aform')}}" accept-charset="UTF-8" method="post">
+ 
+    <label>Do you mean:{{ words }}?</label>
+    <select id="d_y_u" name="y" >
+      <option value="q">select either yes/no</option>
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+    <br>
+    <br>
+  
+    <input type="submit">
+</form>
+</body>
+</html>
